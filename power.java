@@ -3,7 +3,12 @@ public class power {
         if(n==0){
             return 1;
         }else{
-            return x*Power(x,n-1);
+            double partial = Power(x, n/2);
+            double result = partial * partial;
+            if(n%2 == 1){
+                return x*result;
+            }
+            return result;
         }
     }
     
